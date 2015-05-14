@@ -38,6 +38,7 @@ public class  patientdetailsManageController {
 	public void manage(ModelMap model) {
 		/*model.addAttribute("user", Context.getAuthenticatedUser());*/
        List<Patient> allPatients = Context.getPatientService().getAllPatients();
+
        model.addAttribute("patients", allPatients);
 	}
 }

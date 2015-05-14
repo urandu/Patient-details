@@ -36,6 +36,7 @@ public class  patientdetailsEncounterController {
     @RequestMapping(value = "/module/patientdetails/encounter", method = RequestMethod.GET)
     public void manage(ModelMap model,@RequestParam(required = false, value="patientId") Integer ptId)
     {
+       // List<Allergy> allAllergies=Context.getActiveListService().getActiveListItems(Context.getPatientService().getPatient(ptId),Allergy);
         List<Encounter> encountersForPatients = Context.getEncounterService().getEncountersByPatient(Context.getPatientService().getPatient(ptId));
         model.addAttribute("allEncounters", encountersForPatients);
 
